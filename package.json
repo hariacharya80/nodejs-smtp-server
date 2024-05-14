@@ -5,8 +5,8 @@
     "main": "src/index.ts",
     "scripts": {
         "format": "prettier --write .",
-        "start:dev": "ts-node --transpile-only src/index.ts",
         "build": "tsc -p tsconfig.json",
+        "start:dev": "ts-node --transpile-only src/index.ts",
         "start:prod": "npm run build && node dist/index.js"
     },
     "keywords": [
