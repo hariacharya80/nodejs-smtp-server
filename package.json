@@ -9,14 +9,24 @@
         "build": "tsc -p tsconfig.json",
         "start:prod": "npm run build && node dist/index.js"
     },
-    "keywords": ["Mail Server", "Sample Backend", "SMTP Example NodeJs", "JavaScript SMTP Server"],
+    "keywords": [
+        "Mail Server",
+        "Sample Backend",
+        "SMTP Example NodeJs",
+        "JavaScript SMTP Server"
+    ],
     "author": "Hari Acharya",
     "license": "MIT",
     "dependencies": {
+        "express": "^4.19.2",
+        "mailparser": "^3.7.1",
+        "smtp-server": "^3.13.4"
     },
     "devDependencies": {
+        "@types/express": "^4.17.21",
+        "@types/smtp-server": "^3.5.10",
         "prettier": "^3.2.5",
-        "typescript": "^5.4.5",
-        "ts-node": "^10.9.2"
-   }
+        "ts-node": "^10.9.2",
+        "typescript": "^5.4.5"
+    }
 }

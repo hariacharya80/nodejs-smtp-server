@@ -1,0 +1,36 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model user {
+  id           String         @id @default(uuid())
+  name         String
+  username     String
+  domainName   String
+  passwordHash String
+  inbox        InboxEmails[]
+  OutboxEmails OutboxEmails[]
+}
+
+model InboxEmails {
+  id      String  @id @default(uuid())
+  subject String
+  from    String
+  body    String
+  user    user?   @relation(fields: [userId], references: [id])
+  userId  String?
+}
+
+model OutboxEmails {
+  id      String  @id @default(uuid())
+  subject String
+  to      String
+  body    String
+  user    user?   @relation(fields: [userId], references: [id])
+  userId  String?
+}
