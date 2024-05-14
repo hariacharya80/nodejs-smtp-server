@@ -1,19 +1,22 @@
 {
     "name": "smtp-server",
     "version": "1.0.0",
-    "description": "",
-    "main": "index.js",
+    "description": "Simple SMTP Mail Server Created with NodeJS",
+    "main": "src/index.ts",
     "scripts": {
         "format": "prettier --write .",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start:dev": "ts-node --transpile-only src/index.ts",
+        "build": "tsc -p tsconfig.json",
+        "start:prod": "npm run build && node dist/index.js"
     },
-    "keywords": [],
-    "author": "",
-    "license": "ISC",
+    "keywords": ["Mail Server", "Sample Backend", "SMTP Example NodeJs", "JavaScript SMTP Server"],
+    "author": "Hari Acharya",
+    "license": "MIT",
     "dependencies": {
-        "typescript": "^5.4.5"
     },
     "devDependencies": {
-        "prettier": "^3.2.5"
-    }
+        "prettier": "^3.2.5",
+        "typescript": "^5.4.5",
+        "ts-node": "^10.9.2"
+   }
 }
