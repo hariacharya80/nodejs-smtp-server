@@ -1,4 +1,8 @@
-## Welcome!
+
+<img src="./assets/cover.png">
+
+# Welcome
+
 This is a simple repository to implement SMTP server with NodeJS.
 
 This project is fun project built from testing and learning perspective.
